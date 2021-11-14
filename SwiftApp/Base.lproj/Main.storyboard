@@ -362,10 +362,29 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос 3" id="Hb6-eH-N4m"/>
+                    <connections>
+                        <segue destination="5Fb-Ee-clq" kind="presentation" modalPresentationStyle="fullScreen" id="oCy-2T-UiS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaD-Jp-Kh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4730" y="96"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3uI-OU-aCy">
+            <objects>
+                <viewController id="5Fb-Ee-clq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hng-OK-B0p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zbv-Yq-AOd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hC6-0e-hps"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZ8-aq-HhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5513" y="98"/>
         </scene>
     </scenes>
     <resources>
