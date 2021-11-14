@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,7 +77,7 @@
         <!--Профиль-->
         <scene sceneID="g1Q-M9-ZRt">
             <objects>
-                <viewController id="Mxq-g6-WKx" sceneMemberID="viewController">
+                <viewController id="Mxq-g6-WKx" customClass="ProfileViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TTq-Qd-AHi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
         <!--Изменить данные-->
         <scene sceneID="CO3-Ku-6OS">
             <objects>
-                <viewController id="Aeh-iE-VXV" sceneMemberID="viewController">
+                <viewController id="Aeh-iE-VXV" customClass="ChangeProfileViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UT0-aw-bp7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
         <!--Профиль-->
         <scene sceneID="7np-rS-BRR">
             <objects>
-                <tabBarController id="8DY-3u-LDy" sceneMemberID="viewController">
+                <tabBarController id="8DY-3u-LDy" customClass="TabBarController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Профиль" id="err-uZ-k2u"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hcj-4Q-3Ns">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -192,7 +192,7 @@
         <!--Задания-->
         <scene sceneID="W50-0c-5Bg">
             <objects>
-                <tableViewController id="uJM-28-OoH" sceneMemberID="viewController">
+                <tableViewController id="uJM-28-OoH" customClass="TasksTableViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="joj-ie-aCf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
         <!--Вопрос 1-->
         <scene sceneID="vab-xX-GHV">
             <objects>
-                <viewController id="3Kd-uJ-klA" sceneMemberID="viewController">
+                <viewController id="3Kd-uJ-klA" customClass="FirstQuestionViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8VR-rU-mQF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,7 +264,7 @@
         <!--Разработчики-->
         <scene sceneID="Vk9-xK-Vyz">
             <objects>
-                <tableViewController id="Q5n-vW-tqe" sceneMemberID="viewController">
+                <tableViewController id="Q5n-vW-tqe" customClass="DevelopersTableViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wrz-ee-qve">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="2425" y="846"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose Level View Controller-->
         <scene sceneID="JMs-Qt-o35">
             <objects>
-                <viewController id="WGs-vv-Rki" sceneMemberID="viewController">
+                <viewController id="WGs-vv-Rki" customClass="ChooseLevelViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pn1-uR-gj5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,7 +352,7 @@
         <!--Вопрос 2-->
         <scene sceneID="QCV-rR-56e">
             <objects>
-                <viewController id="Zdo-Oy-nhh" sceneMemberID="viewController">
+                <viewController id="Zdo-Oy-nhh" customClass="SecondQuestionViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WX0-SI-DIC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,7 +392,7 @@
         <!--Вопрос 3-->
         <scene sceneID="OTC-1y-jXg">
             <objects>
-                <viewController id="C7D-h7-WHV" sceneMemberID="viewController">
+                <viewController id="C7D-h7-WHV" customClass="ThirdQuestionViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MBf-op-Mk6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,10 +429,10 @@
             </objects>
             <point key="canvasLocation" x="5342" y="97"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="3uI-OU-aCy">
             <objects>
-                <viewController id="5Fb-Ee-clq" sceneMemberID="viewController">
+                <viewController id="5Fb-Ee-clq" customClass="ResultViewController" customModule="SwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hng-OK-B0p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
