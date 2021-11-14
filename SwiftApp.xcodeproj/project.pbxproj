@@ -103,6 +103,7 @@
 				47F2A34B27417FE20020B713 /* SecondQuestionViewController.swift */,
 				47F2A34927417FCA0020B713 /* FirstQuestionViewController.swift */,
 				47F2A34727417F870020B713 /* ChooseLevelViewController.swift */,
+				47F2A351274180460020B713 /* DevelopersTableViewController.swift */,
 				47F2A33E27417E210020B713 /* TabBarController.swift */,
 			);
 			path = ViewControllers;
