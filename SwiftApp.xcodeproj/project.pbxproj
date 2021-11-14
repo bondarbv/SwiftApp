@@ -93,6 +93,7 @@
 		47F2A34427417EF80020B713 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				47F2A351274180460020B713 /* DevelopersTableViewController.swift */,
 				47F2A34227417EDD0020B713 /* ChangeProfileViewController.swift */,
 				47F2A34527417F340020B713 /* TasksTableViewController.swift */,
 				47F2A34027417E7E0020B713 /* ProfileViewController.swift */,
@@ -145,7 +146,6 @@
 		47F2A35C2741816B0020B713 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				47F2A351274180460020B713 /* DevelopersTableViewController.swift */,
 				4726D877274128710034D1F7 /* Assets.xcassets */,
 			);
 			path = Resources;
