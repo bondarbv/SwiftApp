@@ -18,4 +18,6 @@ class DataManager {
     let middleQuestions: [String] = []
     let hardQuestions: [String] = []
     
+    let answers: [String] = ["Ага", "Не-а"]
+    
 }
