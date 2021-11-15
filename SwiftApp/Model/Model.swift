@@ -21,13 +21,22 @@ struct User {
     }
 }
 
-
 struct easyQuestion {
     let title = DataManager.shared.easyQuestions
     let answers = DataManager.shared.answers
     static func getQuestions() -> [easyQuestion] {
         [
         ]
+        //        var questions: [easyQuestion] = []
+        //
+        //        let easyQuestions = DataManager.shared.easyQuestions.shuffled()
+        //        let iterationCount = min(easyQuestions.count, answers.count)
+        //
+        //        for index in 0..<iterationCount {
+        //            let question = easyQuestion()
+        //            questions.append(question)
+        //        }
+        //        return questions
     }
 }
 
@@ -50,9 +59,6 @@ struct hardQuestion {
 }
 
 
-    
-    
-    
 //enum Questions: String {
 //    case easy
 //    case middle
@@ -70,7 +76,7 @@ struct hardQuestion {
 //
 //    }
 //
-//    func getQuestions() -> String {
+//    func getQuestions(case: Questions, index: Int) -> String {
 //        var question = " "
 //        for index in 0..<definitions.count{
 //            question = definitions[index]
