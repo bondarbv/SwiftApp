@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class DataManager {
+    
+    static let shared = DataManager()
+    
+    let easyQuestions: [String] = []
+    let middleQuestions: [String] = []
+    let hardQuestions: [String] = []
+    
+}
