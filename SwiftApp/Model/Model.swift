@@ -25,7 +25,7 @@ struct User {
 struct easyQuestion {
     let title = DataManager.shared.easyQuestions
     let answers = DataManager.shared.answers
-    static func getQuestins() -> [easyQuestion] {
+    static func getQuestions() -> [easyQuestion] {
         [
         ]
     }
@@ -34,7 +34,7 @@ struct easyQuestion {
 struct middleQuestion {
     let title = DataManager.shared.middleQuestions
     let answers = DataManager.shared.answers
-    static func getQuestins() -> [middleQuestion] {
+    static func getQuestions() -> [middleQuestion] {
         [
         ]
     }
@@ -43,7 +43,7 @@ struct middleQuestion {
 struct hardQuestion {
     let title = DataManager.shared.hardQuestions
     let answers = DataManager.shared.answers
-    static func getQuestins() -> [hardQuestion] {
+    static func getQuestions() -> [hardQuestion] {
         [
         ]
     }
