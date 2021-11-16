@@ -10,9 +10,6 @@ import Foundation
 class DataManager {
     
     static let shared = DataManager()
-    let login = "User"
-    let password = "Password"
-    let name = "Maxim"
     
     let login = "User"
     let password = "Password"
@@ -24,4 +21,5 @@ class DataManager {
     
     let answers: [String] = ["Ага", "Не-а"]
     
+    private init() {}
 }
