@@ -8,22 +8,41 @@
 import UIKit
 
 class FirstQuestionViewController: UIViewController {
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var falseButton: UIButton!
+    
+    var question: Question!
+    var result = 0
+    var increaseValue: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initialSetup()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let secondVC = segue.destination as? SecondQuestionViewController else { return }
+        secondVC.result = result
+        secondVC.question = question
+        secondVC.increaseValue = increaseValue
     }
-    */
-
+    
+    @IBAction func buttonsPressed(_ sender: UIButton) {
+        let userAnswer = sender.currentTitle!
+        let correctAnswer = question.answers[0]
+        if userAnswer == correctAnswer {
+            result += increaseValue
+        }
+        performSegue(withIdentifier: "goToSecond", sender: self)
+    }
+    
+    
+    private func initialSetup() {
+        questionLabel.text = question.questions[0]
+        trueButton.setTitle("Да", for: .normal)
+        falseButton.setTitle("Нет", for: .normal)
+        navigationItem.setHidesBackButton(true, animated: false)
+    }
 }

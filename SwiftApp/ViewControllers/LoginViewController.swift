@@ -12,8 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    private let login = "Businka"
-    private let password = "AdiosAmigos"
+    private let login = "B"
+    private let password = "1"
     
     // MARK: - Keyboard Delegate -
 
@@ -40,12 +40,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInReminder() {
-        showAlert(title: "Oops!", message: "Your name is Businka 😉")
+        showAlert(title: "Oops!", message: "Your name is B 😉")
         return
     }
     
     @IBAction func passwordReminder() {
-        showAlert(title: "Oops!", message: "Your password is AdiosAmigos 😉")
+        showAlert(title: "Oops!", message: "Your password is 1 😉")
         return
     }
     

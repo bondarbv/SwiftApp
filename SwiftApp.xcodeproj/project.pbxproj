@@ -93,16 +93,15 @@
 		47F2A34427417EF80020B713 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				47F2A351274180460020B713 /* DevelopersTableViewController.swift */,
-				47F2A34227417EDD0020B713 /* ChangeProfileViewController.swift */,
-				47F2A34527417F340020B713 /* TasksTableViewController.swift */,
-				47F2A34027417E7E0020B713 /* ProfileViewController.swift */,
 				4726D8722741286F0034D1F7 /* LoginViewController.swift */,
+				47F2A34227417EDD0020B713 /* ChangeProfileViewController.swift */,
+				47F2A34027417E7E0020B713 /* ProfileViewController.swift */,
+				47F2A34727417F870020B713 /* ChooseLevelViewController.swift */,
+				47F2A34527417F340020B713 /* TasksTableViewController.swift */,
+				47F2A34927417FCA0020B713 /* FirstQuestionViewController.swift */,
+				47F2A34B27417FE20020B713 /* SecondQuestionViewController.swift */,
 				47F2A34D27417FFD0020B713 /* ThirdQuestionViewController.swift */,
 				47F2A34F2741801C0020B713 /* ResultViewController.swift */,
-				47F2A34B27417FE20020B713 /* SecondQuestionViewController.swift */,
-				47F2A34927417FCA0020B713 /* FirstQuestionViewController.swift */,
-				47F2A34727417F870020B713 /* ChooseLevelViewController.swift */,
 				47F2A351274180460020B713 /* DevelopersTableViewController.swift */,
 				47F2A33E27417E210020B713 /* TabBarController.swift */,
 			);
