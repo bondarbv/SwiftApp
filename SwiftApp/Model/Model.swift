@@ -13,29 +13,123 @@ struct User {
     var name: String
 }
 
-enum Questions: String {
+struct Question {
+    let questions: [String]
+    let answers: [String]
+    var rating: Int
+    var getRating: String {
+        String(repeating: "⭐️", count: rating)
+    }
+}
+
+enum LevelQuestion {
     case easy
     case middle
     case hard
+}
+
+struct DataModel {
+    let lvl: LevelQuestion
     
-    var definitions: [String] {
-        switch self {
+    func getDataForCells() -> [String] {
+        var arrayTitle:[String] = []
+        switch lvl {
         case .easy:
-            return DataManager.shared.easyQuestions
+            arrayTitle = [
+                "Easy Data types questions",
+                "Easy Operators questions",
+                "Easy Arrays questions",
+                "Easy Optionals questions",
+                "Easy Closures questions"
+            ]
         case .middle:
-            return DataManager.shared.middleQuestions
+            arrayTitle = [
+                "Middle Data types questions",
+                "Middle Operators questions",
+                "Middle Arrays questions",
+                "Middle Optionals questions",
+                "Middle Closures questions"
+            ]
         case .hard:
-            return DataManager.shared.hardQuestions
+            arrayTitle = [
+                "Hard Data types Theme",
+                "Hard Operators Theme",
+                "Hard Arrays Theme",
+                "Hard Optionals questions",
+                "Hard Closures questions"
+            ]
         }
         
+        return arrayTitle
     }
     
-    func getQuestions() -> String {
-        var question = " "
-        for index in 0..<definitions.count{
-            question = definitions[index]
+    static func getQuestion(for theme: String) -> Question {
+        
+        let arrays = DataManager.shared
+        
+        switch theme {
+        case "Easy Data types questions":
+            return Question(questions: arrays.dataTypesEasyQuestions,
+                            answers: arrays.dataTypesEasyAnswers,
+                            rating: 1)
+        case "Easy Operators questions":
+            return Question(questions: arrays.operatorsEasyQuestions,
+                            answers: arrays.operatorsEasyAnswers,
+                            rating: 1)
+        case "Easy Arrays questions":
+            return Question(questions: arrays.arraysEasyQuestions,
+                            answers: arrays.arraysEasyAnswers,
+                            rating: 1)
+        case "Easy Optionals questions":
+            return Question(questions: arrays.optionalsEasyQuestions,
+                            answers: arrays.optionalsEasyAnswers,
+                            rating: 1)
+        case "Easy Closures questions":
+            return Question(questions: arrays.closuresEasyQuestions,
+                            answers: arrays.closuresEasyAnswers,
+                            rating: 1)
+        case "Middle Data types questions":
+            return Question(questions: arrays.dataTypesMiddleQuestions,
+                            answers: arrays.dataTypesMiddleAnswers,
+                            rating: 2)
+        case "Middle Operators questions":
+            return Question(questions: arrays.operatorsMiddleQuestions,
+                            answers: arrays.operatorsMiddleAnswers,
+                            rating: 2)
+        case "Middle Arrays questions":
+            return Question(questions: arrays.arraysMiddleQuestions,
+                            answers: arrays.arraysMiddleAnswers,
+                            rating: 2)
+        case "Middle Optionals questions":
+            return Question(questions: arrays.optionalsMiddleQuestions,
+                            answers: arrays.optionalsMiddleAnswers,
+                            rating: 2)
+        case "Middle Closures questions":
+            return Question(questions: arrays.closuresMiddleQuestions,
+                            answers: arrays.closuresMiddleAnswers,
+                            rating: 2)
+        case "Hard Data types Theme":
+            return Question(questions: arrays.dataTypesHardQuestions,
+                            answers: arrays.dataTypesHardAnswers,
+                            rating: 3)
+        case "Hard Operators Theme":
+            return Question(questions: arrays.operatorsHardQuestions,
+                            answers: arrays.operatorsHardAnswers,
+                            rating: 3)
+        case "Hard Arrays Theme":
+            return Question(questions: arrays.arraysHardQuestions,
+                            answers: arrays.arraysHardAnswers,
+                            rating: 3)
+        case "Hard Optionals Theme":
+            return Question(questions: arrays.optionalsHardQuestions,
+                            answers: arrays.optionalsHardAnswers,
+                            rating: 3)
+        default:
+            return Question(questions: arrays.closuresHardQuestions,
+                            answers: arrays.closuresHardAnswers,
+                            rating: 3)
+            
         }
-        return question
     }
-    
 }
+
