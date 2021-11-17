@@ -9,32 +9,32 @@ import UIKit
 
 class TasksTableViewController: UITableViewController {
     
-//    private let arrayOfTasks = Questions.easy
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    var titleArray: [String]!
+    var level: LevelQuestion!
     
     @IBAction func unwindSegue(for segue: UIStoryboardSegue) {
-        
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        titleArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "task", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = "Easy"
-        content.secondaryText = "If you wanna warm up"
+        let titleForCell = titleArray[indexPath.row]
+        content.text = titleForCell
         cell.contentConfiguration = content
         return cell
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let firstQuestionVC = segue.destination as? FirstQuestionViewController else { return }
-        
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let title = titleArray[indexPath.row]
+        let array = DataModel.getQuestion(for: title)
+        firstQuestionVC.question = array
+        firstQuestionVC.increaseValue = array.rating
     }
 }

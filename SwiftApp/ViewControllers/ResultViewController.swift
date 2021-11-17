@@ -12,24 +12,25 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var showResult: UILabel!
     
-    var result = 0
+    var result: Int!
+    var question: Question!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(result)
         initialSet()
     }
     
     func initialSet() {
-        if result <= 10 {
+        question.rating = result
+        if result <= 1 {
             emojiLabel.text = "🐱"
-            showResult.text = String(result)
-        } else if result <= 30 {
+            showResult.text = question.getRating
+        } else if result <= 2 {
             emojiLabel.text = "💥"
-            showResult.text = String(result)
+            showResult.text = question.getRating
         } else {
             emojiLabel.text = "🐒"
-            showResult.text = String(result)
+            showResult.text = question.getRating
         }
     }
 

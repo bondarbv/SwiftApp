@@ -314,7 +314,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Да"/>
                                         <connections>
-                                            <action selector="trueButtonPresed:" destination="3Kd-uJ-klA" eventType="touchUpInside" id="bgJ-sx-icU"/>
+                                            <action selector="buttonsPressed:" destination="3Kd-uJ-klA" eventType="touchUpInside" id="3XK-sE-Spg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO7-SA-Wf4">
@@ -322,7 +322,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Нет"/>
                                         <connections>
-                                            <action selector="falseButtonPressed:" destination="3Kd-uJ-klA" eventType="touchUpInside" id="LIi-Pn-Xm7"/>
+                                            <action selector="buttonsPressed:" destination="3Kd-uJ-klA" eventType="touchUpInside" id="y7s-LG-WBN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -342,7 +342,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос 1" id="deC-LN-dUK"/>
                     <connections>
+                        <outlet property="falseButton" destination="gO7-SA-Wf4" id="0Zj-Xf-efG"/>
                         <outlet property="questionLabel" destination="KwY-9F-0pJ" id="10P-pg-UbQ"/>
+                        <outlet property="trueButton" destination="I4l-YM-yBU" id="O7N-ni-1Yf"/>
                         <segue destination="Zdo-Oy-nhh" kind="show" identifier="goToSecond" id="b3E-fV-hrw"/>
                     </connections>
                 </viewController>
@@ -472,7 +474,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Да"/>
                                         <connections>
-                                            <action selector="trueButtonPressed:" destination="Zdo-Oy-nhh" eventType="touchUpInside" id="xla-qv-J6T"/>
+                                            <action selector="buttonsPressed:" destination="Zdo-Oy-nhh" eventType="touchUpInside" id="Tfb-2G-Egr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvL-Jk-gdi">
@@ -480,7 +482,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Нет"/>
                                         <connections>
-                                            <action selector="falseButtonPressed:" destination="Zdo-Oy-nhh" eventType="touchUpInside" id="HVU-7H-PJz"/>
+                                            <action selector="buttonsPressed:" destination="Zdo-Oy-nhh" eventType="touchUpInside" id="qoz-zd-gfZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -506,7 +508,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос 2" id="dSu-Y1-BbW"/>
                     <connections>
+                        <outlet property="falseButton" destination="nvL-Jk-gdi" id="0Mk-Ds-fjR"/>
                         <outlet property="questionLabel" destination="21Y-A2-Iw6" id="hXs-6z-fQW"/>
+                        <outlet property="trueButton" destination="QQk-ae-LZK" id="en7-xD-or4"/>
                         <segue destination="C7D-h7-WHV" kind="show" identifier="goToThird" id="C2p-vC-fg8"/>
                     </connections>
                 </viewController>
@@ -530,7 +534,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Да"/>
                                         <connections>
-                                            <action selector="trueButtonPressed:" destination="C7D-h7-WHV" eventType="touchUpInside" id="b3M-7D-LJx"/>
+                                            <action selector="buttonsPressed:" destination="C7D-h7-WHV" eventType="touchUpInside" id="a3b-Da-chV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwm-sJ-hm2">
@@ -538,7 +542,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Нет"/>
                                         <connections>
-                                            <action selector="falseButtonPressed:" destination="C7D-h7-WHV" eventType="touchUpInside" id="ABu-Ik-ISs"/>
+                                            <action selector="buttonsPressed:" destination="C7D-h7-WHV" eventType="touchUpInside" id="391-Sv-6jL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -564,7 +568,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос 3" id="Hb6-eH-N4m"/>
                     <connections>
+                        <outlet property="falseButton" destination="Hwm-sJ-hm2" id="oO3-ig-Bia"/>
                         <outlet property="questionLabel" destination="tZ1-Gj-9Ca" id="Egc-sr-sWp"/>
+                        <outlet property="trueButton" destination="HYF-kO-R7G" id="rfU-Ha-Lrv"/>
                         <segue destination="5Fb-Ee-clq" kind="presentation" identifier="goToResult" modalPresentationStyle="fullScreen" id="oCy-2T-UiS"/>
                     </connections>
                 </viewController>
@@ -599,7 +605,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVh-fe-kRF">
                                 <rect key="frame" x="120" y="408" width="174" height="24"/>
-                                <color key="backgroundColor" red="0.0039215686269999999" green="0.0039215686269999999" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

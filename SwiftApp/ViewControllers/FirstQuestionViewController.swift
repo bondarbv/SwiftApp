@@ -10,32 +10,39 @@ import UIKit
 class FirstQuestionViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var trueButton: UIButton!
+    @IBOutlet weak var falseButton: UIButton!
     
-    var question = DataManager().easyQuestions[0]
+    var question: Question!
     var result = 0
+    var increaseValue: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = question
-        navigationItem.setHidesBackButton(true, animated: false)
+        initialSetup()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let secondVC = segue.destination as? SecondQuestionViewController else { return }
         secondVC.result = result
+        secondVC.question = question
+        secondVC.increaseValue = increaseValue
     }
     
-    @IBAction func trueButtonPresed(_ sender: UIButton) {
-        result += 5
+    @IBAction func buttonsPressed(_ sender: UIButton) {
+        let userAnswer = sender.currentTitle!
+        let correctAnswer = question.answers[0]
+        if userAnswer == correctAnswer {
+            result += increaseValue
+        }
         performSegue(withIdentifier: "goToSecond", sender: self)
-        
     }
     
-    @IBAction func falseButtonPressed(_ sender: UIButton) {
-        result += 15
-        performSegue(withIdentifier: "goToSecond", sender: self)
-        print(result)
-    }
     
-
+    private func initialSetup() {
+        questionLabel.text = question.questions[0]
+        trueButton.setTitle("Да", for: .normal)
+        falseButton.setTitle("Нет", for: .normal)
+        navigationItem.setHidesBackButton(true, animated: false)
+    }
 }
