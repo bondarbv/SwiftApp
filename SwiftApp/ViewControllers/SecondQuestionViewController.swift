@@ -8,22 +8,35 @@
 import UIKit
 
 class SecondQuestionViewController: UIViewController {
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    var question = DataManager().easyQuestions[1]
+    var result = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(result)
+        navigationItem.setHidesBackButton(true, animated: false)
+        questionLabel.text = question
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let thirdVC = segue.destination as? ThirdQuestionViewController else { return }
+        thirdVC.result = result
     }
-    */
-
+    
+    @IBAction func trueButtonPressed(_ sender: UIButton) {
+        result += 10
+        performSegue(withIdentifier: "goToThird", sender: self)
+        print(result)
+    }
+    
+    @IBAction func falseButtonPressed(_ sender: UIButton) {
+        result += 5
+        performSegue(withIdentifier: "goToThird", sender: self)
+        
+        print(result)
+    }
+    
 }

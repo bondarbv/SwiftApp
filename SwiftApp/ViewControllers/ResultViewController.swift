@@ -9,21 +9,28 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var emojiLabel: UILabel!
+    @IBOutlet weak var showResult: UILabel!
+    
+    var result = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(result)
+        initialSet()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initialSet() {
+        if result <= 10 {
+            emojiLabel.text = "🐱"
+            showResult.text = String(result)
+        } else if result <= 30 {
+            emojiLabel.text = "💥"
+            showResult.text = String(result)
+        } else {
+            emojiLabel.text = "🐒"
+            showResult.text = String(result)
+        }
     }
-    */
 
 }

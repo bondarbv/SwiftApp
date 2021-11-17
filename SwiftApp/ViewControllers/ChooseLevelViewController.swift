@@ -8,22 +8,29 @@
 import UIKit
 
 class ChooseLevelViewController: UIViewController {
-
+    
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var displayView: UILabel!
+    
+    var selectedTheme: String!
+    private var selectedLevel: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let taskTVC = segue.destination as? TasksTableViewController else { return }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func sliderMoved(_ sender: UISlider) {
+        if sender.value < 0.25 {
+            displayView.text = "Easy"
+        } else if sender.value < 0.75 {
+            displayView.text = "Medium"
+        } else {
+            displayView.text = "Hard"
+        }
     }
-    */
-
+    
 }
