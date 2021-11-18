@@ -11,6 +11,10 @@ class DataManager {
     
     static let shared = DataManager()
     
+    let login = "Alex"
+    let password = "1234"
+    let name = "Aleksey"
+    
     //MARK: - Easy Question
     // Data types question
     let dataTypesEasyQuestions: [String] = [

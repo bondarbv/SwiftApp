@@ -12,8 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    private let login = "B"
-    private let password = "1"
+    private let user = User.getUserData()
     
     // MARK: - Keyboard Delegate -
 
@@ -31,7 +30,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - ABActions -
     @IBAction func logInButtonPressed() {
-        if loginField.text == login && passwordField.text == password {
+        if loginField.text == user.login && passwordField.text == user.password {
         } else {
             showAlert(
                 title: "Invalid login or password",
@@ -40,12 +39,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInReminder() {
-        showAlert(title: "Oops!", message: "Your name is B 😉")
+        showAlert(title: "Oops!", message: "Your name is \(user.login)😉")
         return
     }
     
     @IBAction func passwordReminder() {
-        showAlert(title: "Oops!", message: "Your password is 1 😉")
+        showAlert(title: "Oops!", message: "Your password is \(user.password) 😉")
         return
     }
     
