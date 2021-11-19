@@ -11,9 +11,11 @@ class ResultViewController: UIViewController {
 
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var showResult: UILabel!
+    @IBOutlet weak var textView: UITextView!
     
     var result: Int!
     var question: Question!
+    var failed: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,9 @@ class ResultViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let profileVC = segue.destination as? ProfileViewController else { return }
-        profileVC.result = question.getRating
+        let score = question.getRating
+        profileVC.result = score
+        profileVC.progressView.progress = Float(score.count) / 9.0
     }
     
     private func initialSet() {
@@ -32,16 +36,18 @@ class ResultViewController: UIViewController {
         case 1,2,3:
             emojiLabel.text = "🐱"
             showResult.text = question.getRating
-        case 4,5,6:
+        case 4,6:
             emojiLabel.text = "💥"
             showResult.text = question.getRating
         case 7,8,9:
             emojiLabel.text = "🐒"
             showResult.text = question.getRating
         default:
-            emojiLabel.text = "Что-то пошло не так 😕"
+            emojiLabel.text = "😕"
             showResult.text = question.getRating
         }
+        
+        textView.text = failed.joined(separator: "❌ \n")
 
     }
 

@@ -14,8 +14,9 @@ class FirstQuestionViewController: UIViewController {
     @IBOutlet weak var falseButton: UIButton!
     
     var question: Question!
-    var result = 0
+    private var result = 0
     var increaseValue: Int!
+    private var failed: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class FirstQuestionViewController: UIViewController {
         secondVC.result = result
         secondVC.question = question
         secondVC.increaseValue = increaseValue
+        secondVC.failed = failed
     }
     
     @IBAction func buttonsPressed(_ sender: UIButton) {
@@ -34,6 +36,8 @@ class FirstQuestionViewController: UIViewController {
         let correctAnswer = question.answers[0]
         if userAnswer == correctAnswer {
             result += increaseValue
+        } else {
+            failed.append(question.questions[0])
         }
         performSegue(withIdentifier: "goToSecond", sender: self)
     }

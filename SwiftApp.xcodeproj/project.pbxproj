@@ -15,7 +15,6 @@
 		4726D87B274128710034D1F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4726D879274128710034D1F7 /* LaunchScreen.storyboard */; };
 		47F2A33F27417E210020B713 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2A33E27417E210020B713 /* TabBarController.swift */; };
 		47F2A34127417E7E0020B713 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2A34027417E7E0020B713 /* ProfileViewController.swift */; };
-		47F2A34327417EDD0020B713 /* ChangeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2A34227417EDD0020B713 /* ChangeProfileViewController.swift */; };
 		47F2A34627417F340020B713 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2A34527417F340020B713 /* TasksTableViewController.swift */; };
 		47F2A34827417F870020B713 /* ChooseLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2A34727417F870020B713 /* ChooseLevelViewController.swift */; };
 		47F2A34A27417FCA0020B713 /* FirstQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2A34927417FCA0020B713 /* FirstQuestionViewController.swift */; };
@@ -38,7 +37,6 @@
 		4726D87C274128710034D1F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47F2A33E27417E210020B713 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		47F2A34027417E7E0020B713 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		47F2A34227417EDD0020B713 /* ChangeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileViewController.swift; sourceTree = "<group>"; };
 		47F2A34527417F340020B713 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		47F2A34727417F870020B713 /* ChooseLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLevelViewController.swift; sourceTree = "<group>"; };
 		47F2A34927417FCA0020B713 /* FirstQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstQuestionViewController.swift; sourceTree = "<group>"; };
@@ -80,12 +78,12 @@
 		4726D86D2741286F0034D1F7 /* SwiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				47F2A359274180A90020B713 /* Services */,
 				47F2A356274180930020B713 /* Model */,
 				47F2A34427417EF80020B713 /* ViewControllers */,
 				47F2A35A274180C10020B713 /* Storyboards */,
 				47F2A35C2741816B0020B713 /* Resources */,
 				47F2A35B274181540020B713 /* Configs */,
-				47F2A359274180A90020B713 /* Services */,
 			);
 			path = SwiftApp;
 			sourceTree = "<group>";
@@ -96,7 +94,6 @@
 				4726D8722741286F0034D1F7 /* LoginViewController.swift */,
 				47F2A33E27417E210020B713 /* TabBarController.swift */,
 				47F2A34027417E7E0020B713 /* ProfileViewController.swift */,
-				47F2A34227417EDD0020B713 /* ChangeProfileViewController.swift */,
 				47F2A34727417F870020B713 /* ChooseLevelViewController.swift */,
 				47F2A34527417F340020B713 /* TasksTableViewController.swift */,
 				47F2A34927417FCA0020B713 /* FirstQuestionViewController.swift */,
@@ -229,7 +226,6 @@
 				47F2A352274180460020B713 /* DevelopersTableViewController.swift in Sources */,
 				47F2A33F27417E210020B713 /* TabBarController.swift in Sources */,
 				47F2A34827417F870020B713 /* ChooseLevelViewController.swift in Sources */,
-				47F2A34327417EDD0020B713 /* ChangeProfileViewController.swift in Sources */,
 				47F2A3552741808F0020B713 /* Model.swift in Sources */,
 				47F2A34E27417FFD0020B713 /* ThirdQuestionViewController.swift in Sources */,
 				47F2A34127417E7E0020B713 /* ProfileViewController.swift in Sources */,

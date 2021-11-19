@@ -11,6 +11,24 @@ class DataManager {
     
     static let shared = DataManager()
     
+    //MARK: - Devs
+    let arraysDevelopers = [
+        "Bohdan",
+        "Julia",
+        "Felix",
+        "Maxim",
+        "Alexandr",
+        "Alik"
+    ]
+    
+    
+    //MARK: - UserInfo
+    let storageArray = [
+        User(login: "Test", password: "1234", person: Person(name: "Alex", surName: "Petrov", image: "chert")),
+        User(login: "T", password: "1", person: Person(name: "Vasya", surName: "Blin", image: "ava"))
+    ]
+    
+    
     //MARK: - Easy Question
     // Data types question
     let dataTypesEasyQuestions: [String] = [

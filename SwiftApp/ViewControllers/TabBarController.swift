@@ -9,16 +9,21 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
-    var person: User!
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupViewControllers()
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let profileVC = segue.destination as? ProfileViewController else { return }
-        print(person.name)
-        profileVC.name = person.name
+    
+    private func setupViewControllers() {
+        guard let viewControllers = viewControllers else { return }
+        viewControllers.forEach {
+            if let profileVC = $0 as? ProfileViewController {
+                profileVC.name = user.person.fullName
+                profileVC.image = user.person.image
+            }
+        }
     }
 
 

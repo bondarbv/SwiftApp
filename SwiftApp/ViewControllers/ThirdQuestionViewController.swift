@@ -16,6 +16,7 @@ class ThirdQuestionViewController: UIViewController {
     var question: Question!
     var result: Int!
     var increaseValue: Int!
+    var failed: [String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class ThirdQuestionViewController: UIViewController {
         guard let resultVC = segue.destination as? ResultViewController else { return }
         resultVC.result = result
         resultVC.question = question
+        resultVC.failed = failed
     }
     
     @IBAction func buttonsPressed(_ sender: UIButton) {
@@ -33,6 +35,8 @@ class ThirdQuestionViewController: UIViewController {
         let correctAnswer = question.answers[2]
         if userAnswer == correctAnswer {
             result += increaseValue
+        } else {
+            failed.append(question.questions[2])
         }
         performSegue(withIdentifier: "goToResult", sender: self)
     }
