@@ -8,13 +8,23 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViewControllers()
     }
     
+    private func setupViewControllers() {
+        guard let viewControllers = viewControllers else { return }
+        viewControllers.forEach {
+            if let profileVC = $0 as? ProfileViewController {
+                profileVC.name = user.person.fullName
+                profileVC.image = user.person.image
+            }
+        }
+    }
 
 
 }

@@ -8,16 +8,32 @@
 import Foundation
 
 struct User {
-    var login: String
-    var password: String
-    var name: String
+    let login: String
+    let password: String
+    let person: Person
     
-    static func getUserData() -> User {
-        User(
-            login: DataManager.shared.login,
-            password: DataManager.shared.password,
-            name: DataManager.shared.name
-        )
+    static func getPerson(_ login: String, _ password: String) -> User {
+        
+        let storageUsers = DataManager.shared.storageArray
+        var currentUser = User(login: " ", password: " ", person: Person(name: "", surName: "", image: ""))
+        
+        for user in storageUsers {
+            if user.login == login && user.password == password {
+                currentUser = user
+            }
+        }
+        
+        return currentUser
+    }
+}
+
+struct Person {
+    let name: String
+    let surName: String
+    let image: String
+    
+    var fullName: String {
+        "\(name) \(surName)"
     }
 }
 

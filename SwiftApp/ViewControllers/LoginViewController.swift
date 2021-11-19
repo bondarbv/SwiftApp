@@ -12,24 +12,26 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    private let user = User.getUserData()
+    @IBOutlet weak var loginButton: UIButton!
+    
+    private var user: User!
     
     // MARK: - Keyboard Delegate -
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginField.delegate = self
-        loginField.returnKeyType = .next
-        
-        passwordField.delegate = self
-        passwordField.returnKeyType = .done
-        
-        passwordField.isEnabled = true
-        passwordField.enablesReturnKeyAutomatically = true
+        initialSetup()
     }
     
-    // MARK: - ABActions -
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let tabBarController = navigationVC.topViewController as? TabBarController else { return }
+        tabBarController.user = user
+    }
+    
+    // MARK: - ABActions
     @IBAction func logInButtonPressed() {
+        guard let login = loginField.text, let password = passwordField.text else { return }
+        user = User.getPerson(login, password)
         if loginField.text == user.login && passwordField.text == user.password {
         } else {
             showAlert(
@@ -48,11 +50,21 @@ class LoginViewController: UIViewController {
         return
     }
     
-
-    //MARK: - Alert Controller -
-
+    private func initialSetup() {
+        loginField.delegate = self
+        loginField.returnKeyType = .next
+        
+        passwordField.delegate = self
+        passwordField.returnKeyType = .done
+        
+        passwordField.isEnabled = true
+        passwordField.enablesReturnKeyAutomatically = true
+        
+        loginButton.layer.cornerRadius = 15
+    }
 }
 
+//MARK: - Alert Controller
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -62,6 +74,7 @@ extension LoginViewController {
     }
 }
 
+//MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

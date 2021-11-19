@@ -16,6 +16,7 @@ class SecondQuestionViewController: UIViewController {
     var question: Question!
     var result: Int!
     var increaseValue: Int!
+    var failed: [String]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class SecondQuestionViewController: UIViewController {
         thirdVC.result = result
         thirdVC.question = question
         thirdVC.increaseValue = increaseValue
+        thirdVC.failed = failed
     }
     
     @IBAction func buttonsPressed(_ sender: UIButton) {
@@ -34,6 +36,8 @@ class SecondQuestionViewController: UIViewController {
         let correctAnswer = question.answers[1]
         if userAnswer == correctAnswer {
             result += increaseValue
+        } else {
+            failed.append(question.questions[1])
         }
         performSegue(withIdentifier: "goToThird", sender: self)
     }
