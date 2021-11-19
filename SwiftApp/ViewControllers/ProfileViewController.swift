@@ -9,21 +9,36 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    var name = "Vasya"
+    var result = "Пока ничего 😌"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateLabel()
+        ratingLabel.text = result
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let changeVC = segue.destination as? ChangeProfileViewController else { return }
+        changeVC.name = name
     }
-    */
+    
+    @IBAction func unwindSegue(for segue: UIStoryboardSegue) {
+//        guard let changeVC = segue.source as? ChangeProfileViewController else { return }
+//        nameLabel.text = changeVC.newName
+        guard let resultVC = segue.source as? ResultViewController else { return }
+        let rating = resultVC.question.getRating
+        ratingLabel.text = rating
+        
+    }
+    
+    private func updateLabel() {
+        nameLabel.text = name
+    }
 
 }

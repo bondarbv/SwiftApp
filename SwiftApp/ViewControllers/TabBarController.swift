@@ -8,13 +8,18 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    
+    var person: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let profileVC = segue.destination as? ProfileViewController else { return }
+        print(person.name)
+        profileVC.name = person.name
+    }
 
 
 }

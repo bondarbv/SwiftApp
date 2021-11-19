@@ -11,6 +11,10 @@ struct User {
     var login: String
     var password: String
     var name: String
+    
+    static func getPerson() -> User {
+        User(login: "B", password: "1", name: "Alex")
+    }
 }
 
 struct Question {

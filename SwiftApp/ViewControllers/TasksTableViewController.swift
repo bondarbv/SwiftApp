@@ -11,9 +11,6 @@ class TasksTableViewController: UITableViewController {
     
     var titleArray: [String]!
     var level: LevelQuestion!
-    
-    @IBAction func unwindSegue(for segue: UIStoryboardSegue) {
-    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

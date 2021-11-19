@@ -12,8 +12,10 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
-    private let login = "B"
-    private let password = "1"
+    var person = User.getPerson()
+    
+    private let login = User.getPerson().login
+    private let password = User.getPerson().password
     
     // MARK: - Keyboard Delegate -
 
@@ -27,6 +29,12 @@ class LoginViewController: UIViewController {
         
         passwordField.isEnabled = true
         passwordField.enablesReturnKeyAutomatically = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let tabBarController = navigationVC.topViewController as? TabBarController else { return }
+        tabBarController.person =  person
     }
     
     // MARK: - ABActions -
