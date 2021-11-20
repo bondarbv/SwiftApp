@@ -49,7 +49,7 @@ class ResultViewController: UIViewController {
         
         textView.text = """
         Вы допустили ошибку в этих вопросах:
-        \( failed.joined(separator: "❌ \n"))"
+        \( failed.joined(separator: "❌ \n"))
         """
         
     }
