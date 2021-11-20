@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet var loginField: UITextField!
     @IBOutlet var passwordField: UITextField!
     
@@ -41,12 +41,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInReminder() {
-        showAlert(title: "Oops!", message: "Your name is \(user.login)😉")
+        showAlert(title: "Oops!", message: "Your name is T or Test 😉")
         return
     }
     
     @IBAction func passwordReminder() {
-        showAlert(title: "Oops!", message: "Your password is \(user.password) 😉")
+        showAlert(title: "Oops!", message: "Your password is 1 of 1234😉")
         return
     }
     
@@ -90,6 +90,6 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
-
+    
 }
 
