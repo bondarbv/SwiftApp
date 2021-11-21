@@ -55,7 +55,7 @@ class ResultViewController: UIViewController {
             showResult.text = question.getRating
             view.backgroundColor = .systemRed
         } else {
-            firstFail.text = "Всё отлично, Вы не допустили ошибок в тесте, так держать!"
+            firstFail.text = "Всё отлично! Вы не допустили ошибок в тесте, так держать!"
             emojiLabel.text = "🐒"
             showResult.text = question.getRating
         }

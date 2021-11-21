@@ -51,16 +51,7 @@ class LoginViewController: UIViewController {
     }
     
     private func initialSetup() {
-        loginField.delegate = self
-        loginField.returnKeyType = .next
-        
-        passwordField.delegate = self
-        passwordField.returnKeyType = .done
-        
-        passwordField.isEnabled = true
-        passwordField.enablesReturnKeyAutomatically = true
-        
-        loginButton.layer.cornerRadius = 15
+       loginButton.layer.cornerRadius = 15
         
         let upColor = UIColor(red: 1.00, green: 0.83, blue: 0.19, alpha: 1.00)
         let bottomColor = UIColor(red: 0.98, green: 0.51, blue: 0.19, alpha: 1.00)
