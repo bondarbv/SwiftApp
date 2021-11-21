@@ -13,18 +13,28 @@ struct User {
     let person: Person
     
     static func getPerson(_ login: String, _ password: String) -> User {
-        
         let storageUsers = DataManager.shared.storageArray
         var currentUser = User(login: " ", password: " ", person: Person(name: "", surName: "", image: ""))
-        
         for user in storageUsers {
             if user.login == login && user.password == password {
                 currentUser = user
             }
         }
-        
         return currentUser
     }
+    
+//    static func getLoginHint(_ login: String) -> String {
+//        let storageUsers = DataManager.shared.storageArray
+//        var login: String
+//        
+//        return ""
+//    }
+//    
+//    static func getPasswordHint(_ password: String) -> String {
+//        var password: String
+//        
+//        return ""
+//    }
 }
 
 struct Person {
@@ -88,7 +98,6 @@ struct DataModel {
     }
     
     static func getQuestion(for theme: String) -> Question {
-        
         let arrays = DataManager.shared
         
         switch theme {
