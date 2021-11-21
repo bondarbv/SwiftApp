@@ -46,7 +46,12 @@ class FirstQuestionViewController: UIViewController {
     private func initialSetup() {
         questionLabel.text = question.questions[0]
         trueButton.setTitle("Да", for: .normal)
+        
+        trueButton.layer.cornerRadius = 15
         falseButton.setTitle("Нет", for: .normal)
+        
+        falseButton.layer.cornerRadius = 15
+        
         navigationItem.setHidesBackButton(true, animated: false)
     }
 }

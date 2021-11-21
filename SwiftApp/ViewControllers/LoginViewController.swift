@@ -61,6 +61,10 @@ class LoginViewController: UIViewController {
         passwordField.enablesReturnKeyAutomatically = true
         
         loginButton.layer.cornerRadius = 15
+        
+        let upColor = UIColor(red: 1.00, green: 0.83, blue: 0.19, alpha: 1.00)
+        let bottomColor = UIColor(red: 0.98, green: 0.51, blue: 0.19, alpha: 1.00)
+        view.gradient(upColor: upColor, bottomColor: bottomColor)
     }
 }
 
@@ -68,7 +72,9 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordField.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }
@@ -90,6 +96,16 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
-    
 }
 
+extension UIView {
+    func gradient(upColor: UIColor, bottomColor: UIColor) {
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = [upColor.cgColor, bottomColor.cgColor]
+        gradient.locations = [0.0, 1.0]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        layer.insertSublayer(gradient, at: 0)
+    }
+}

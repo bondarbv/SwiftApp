@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct Developers {
+    let name: String
+    let git: String
+    let image: String
+}
+
 struct User {
     let login: String
     let password: String
@@ -22,19 +28,6 @@ struct User {
         }
         return currentUser
     }
-    
-//    static func getLoginHint(_ login: String) -> String {
-//        let storageUsers = DataManager.shared.storageArray
-//        var login: String
-//        
-//        return ""
-//    }
-//    
-//    static func getPasswordHint(_ password: String) -> String {
-//        var password: String
-//        
-//        return ""
-//    }
 }
 
 struct Person {
@@ -161,7 +154,6 @@ struct DataModel {
             return Question(questions: arrays.closuresHardQuestions,
                             answers: arrays.closuresHardAnswers,
                             rating: 3)
-            
         }
     }
 }

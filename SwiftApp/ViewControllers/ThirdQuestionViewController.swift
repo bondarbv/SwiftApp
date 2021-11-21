@@ -43,8 +43,13 @@ class ThirdQuestionViewController: UIViewController {
     
     private func initialSetup() {
         trueButton.setTitle("Да", for: .normal)
+        trueButton.layer.cornerRadius = 15
+        
         falseButton.setTitle("Нет", for: .normal)
+        falseButton.layer.cornerRadius = 15
+        
         questionLabel.text = question.questions[2]
+        
         navigationItem.setHidesBackButton(true, animated: false)
     }
     

@@ -11,7 +11,8 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var showResult: UILabel!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var firstFail: UILabel!
+    @IBOutlet weak var seondFail: UILabel!
     
     var result: Int!
     var question: Question!
@@ -31,27 +32,32 @@ class ResultViewController: UIViewController {
     
     private func initialSet() {
         question.rating = result
-        
-        switch result {
-        case 1,2,3:
-            emojiLabel.text = "🐱"
-            showResult.text = question.getRating
-        case 4,6:
-            emojiLabel.text = "💥"
-            showResult.text = question.getRating
-        case 7,8,9:
-            emojiLabel.text = "🐒"
-            showResult.text = question.getRating
-        default:
-            emojiLabel.text = "😕"
-            showResult.text = question.getRating
-        }
-        
-        textView.text = """
-        Вы допустили ошибку в этих вопросах:
-        \( failed.joined(separator: "❌ \n"))
-        """
-        
+        failAnswer()
     }
     
+    private func failAnswer() {
+        if failed.count == 2 {
+            firstFail.text = "Вы допустили ошибки в этих вопросах:"
+            seondFail.text = failed.joined(separator: "❌\n") + "❌"
+            emojiLabel.text = "🐱"
+            showResult.text = question.getRating
+            view.backgroundColor = .systemOrange
+        } else if failed.count == 1 {
+            firstFail.text = "Вы допустили ошибку в этом вопросe:"
+            seondFail.text = failed.joined(separator: "❌\n") + "❌"
+            emojiLabel.text = "💥"
+            showResult.text = question.getRating
+            view.backgroundColor = .systemMint
+        } else if failed.count > 2 {
+            firstFail.text = "Похоже кто-то плохо учил теорию..."
+            seondFail.text = failed.joined(separator: "❌\n") + "❌"
+            emojiLabel.text = "😕"
+            showResult.text = question.getRating
+            view.backgroundColor = .systemRed
+        } else {
+            firstFail.text = "Всё отлично, Вы не допустили ошибок в тесте, так держать!"
+            emojiLabel.text = "🐒"
+            showResult.text = question.getRating
+        }
+    }
 }

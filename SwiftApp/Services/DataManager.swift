@@ -13,12 +13,24 @@ class DataManager {
     
     //MARK: - Devs
     let arraysDevelopers = [
-        "Bohdan",
-        "Julia",
-        "Felix",
-        "Maxim",
-        "Alexandr",
-        "Alik"
+        Developers(name: "Bohdan",
+                   git: "https://github.com/bondarbv",
+                   image: "👨🏼‍💻"),
+        Developers(name: "Julia",
+                   git: "https://github.com/JuliaTsukerman",
+                   image: "👩🏻‍💻"),
+        Developers(name: "Felix",
+                   git: "https://github.com/FLX007",
+                   image: "👨🏻‍💻"),
+        Developers(name: "Maxim",
+                   git: "https://github.com/MaxKrutin",
+                   image: "👨🏻‍💻"),
+        Developers(name: "Alexandr",
+                   git: "https://github.com/AlexandrPronin32",
+                   image: "👨🏼‍💻"),
+        Developers(name: "Alik",
+                   git: "https://github.com/NigayAO",
+                   image: "🤖")
     ]
     
     

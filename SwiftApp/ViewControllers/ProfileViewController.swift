@@ -10,9 +10,13 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    
     @IBOutlet weak var progressView: UIProgressView!
+    
+    @IBOutlet weak var button: UIButton!
     
     var name: String!
     var image: String!
@@ -22,7 +26,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabel()
+        updateUI()
     }
     
     @IBAction func unwindSegue(for segue: UIStoryboardSegue) {
@@ -31,10 +35,11 @@ class ProfileViewController: UIViewController {
         ratingLabel.text = rating
     }
     
-    private func updateLabel() {
+    private func updateUI() {
         nameLabel.text = name
         ratingLabel.text = result
         imageView.image = UIImage(named: image)
-        
+        imageView.layer.cornerRadius = 30
+        button.layer.cornerRadius = 15
     }
 }

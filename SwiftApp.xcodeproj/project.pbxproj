@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB31604274A62B500A0A5EE /* DetailDeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB31603274A62B500A0A5EE /* DetailDeveloperViewController.swift */; };
 		4726D86F2741286F0034D1F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726D86E2741286F0034D1F7 /* AppDelegate.swift */; };
 		4726D8712741286F0034D1F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726D8702741286F0034D1F7 /* SceneDelegate.swift */; };
 		4726D8732741286F0034D1F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726D8722741286F0034D1F7 /* LoginViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DB31603274A62B500A0A5EE /* DetailDeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeveloperViewController.swift; sourceTree = "<group>"; };
 		4726D86B2741286F0034D1F7 /* SwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4726D86E2741286F0034D1F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4726D8702741286F0034D1F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				47F2A34D27417FFD0020B713 /* ThirdQuestionViewController.swift */,
 				47F2A34F2741801C0020B713 /* ResultViewController.swift */,
 				47F2A351274180460020B713 /* DevelopersTableViewController.swift */,
+				1DB31603274A62B500A0A5EE /* DetailDeveloperViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				47F2A33F27417E210020B713 /* TabBarController.swift in Sources */,
 				47F2A34827417F870020B713 /* ChooseLevelViewController.swift in Sources */,
 				47F2A3552741808F0020B713 /* Model.swift in Sources */,
+				1DB31604274A62B500A0A5EE /* DetailDeveloperViewController.swift in Sources */,
 				47F2A34E27417FFD0020B713 /* ThirdQuestionViewController.swift in Sources */,
 				47F2A34127417E7E0020B713 /* ProfileViewController.swift in Sources */,
 				4726D86F2741286F0034D1F7 /* AppDelegate.swift in Sources */,

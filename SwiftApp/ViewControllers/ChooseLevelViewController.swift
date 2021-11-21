@@ -11,6 +11,7 @@ class ChooseLevelViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var displayView: UILabel!
+    @IBOutlet weak var buttonApply: UIButton!
     
     private var level: LevelQuestion = .middle
     
@@ -22,6 +23,13 @@ class ChooseLevelViewController: UIViewController {
         guard let taskTVC = segue.destination as? TasksTableViewController else { return }
         let array = DataModel(lvl: level).getDataForCells()
         taskTVC.titleArray = array
+    }
+    
+    @IBAction func infoButtonPressed() {
+        let alert = UIAlertController(title: "Система рейтинга", message: "В зависимости от выбранного уровня сложности - будут разные оценки, за легкий уровень по ⭐️ за правильный ответ, за средний - ⭐️⭐️ и за сложный - ⭐️⭐️⭐️.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Понятненько!", style: .cancel)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
     
     @IBAction func sliderMoved(_ sender: UISlider) {
@@ -39,6 +47,7 @@ class ChooseLevelViewController: UIViewController {
     private func initialSet() {
         displayView.text = "Средний"
         slider.value = 0.5
+        buttonApply.layer.cornerRadius = 15
     }
     
 }
