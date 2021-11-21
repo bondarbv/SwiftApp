@@ -8,7 +8,7 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
     @IBOutlet weak var emojiLabel: UILabel!
     @IBOutlet weak var showResult: UILabel!
     @IBOutlet weak var textView: UITextView!
@@ -47,8 +47,11 @@ class ResultViewController: UIViewController {
             showResult.text = question.getRating
         }
         
-        textView.text = failed.joined(separator: "❌ \n")
-
+        textView.text = """
+        Вы допустили ошибку в этих вопросах:
+        \( failed.joined(separator: "❌ \n"))
+        """
+        
     }
-
+    
 }
