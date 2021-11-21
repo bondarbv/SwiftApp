@@ -68,7 +68,9 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default){_ in
+            self.passwordField?.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }

@@ -129,32 +129,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-CA-JsI">
-                                <rect key="frame" x="80" y="182" width="254" height="265"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oZb-eQ-dFy">
-                                <rect key="frame" x="16" y="497" width="382" height="155"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Jkv-ao-HK4">
+                                <rect key="frame" x="16" y="170" width="382" height="623"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9e-TN-nyi">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gp3-IF-DCv">
-                                        <rect key="frame" x="0.0" y="52" width="382" height="4"/>
-                                    </progressView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TW-qj-u50">
-                                        <rect key="frame" x="0.0" y="72" width="382" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VSz-NI-17x">
-                                        <rect key="frame" x="0.0" y="124" width="382" height="31"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-CA-JsI">
+                                        <rect key="frame" x="47" y="0.0" width="288" height="286.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oZb-eQ-dFy">
+                                        <rect key="frame" x="47" y="336.5" width="288" height="286.5"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9e-TN-nyi">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gp3-IF-DCv">
+                                                <rect key="frame" x="0.0" y="52" width="288" height="4"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TW-qj-u50">
+                                                <rect key="frame" x="0.0" y="72" width="288" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-Mf-Q20">
-                                                <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
+                                                <rect key="frame" x="0.0" y="124" width="288" height="162.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Выход"/>
                                                 <connections>
@@ -169,13 +169,10 @@
                         <viewLayoutGuide key="safeArea" id="0I0-WG-681"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NEI-CA-JsI" firstAttribute="top" secondItem="0I0-WG-681" secondAttribute="top" constant="42" id="9rZ-vY-ApG"/>
-                            <constraint firstItem="NEI-CA-JsI" firstAttribute="leading" secondItem="0I0-WG-681" secondAttribute="leading" constant="80" id="F3g-jz-r5s"/>
-                            <constraint firstItem="oZb-eQ-dFy" firstAttribute="leading" secondItem="0I0-WG-681" secondAttribute="leading" constant="16" id="JJa-QW-Tc3"/>
-                            <constraint firstItem="oZb-eQ-dFy" firstAttribute="top" secondItem="NEI-CA-JsI" secondAttribute="bottom" constant="50" id="OD3-pv-iVw"/>
-                            <constraint firstItem="0I0-WG-681" firstAttribute="trailing" secondItem="oZb-eQ-dFy" secondAttribute="trailing" constant="16" id="T4k-zm-X92"/>
-                            <constraint firstItem="0I0-WG-681" firstAttribute="bottom" secondItem="NEI-CA-JsI" secondAttribute="bottom" constant="366" id="dP0-4A-MCi"/>
-                            <constraint firstItem="0I0-WG-681" firstAttribute="trailing" secondItem="NEI-CA-JsI" secondAttribute="trailing" constant="80" id="y8W-gF-rjy"/>
+                            <constraint firstItem="Jkv-ao-HK4" firstAttribute="leading" secondItem="TTq-Qd-AHi" secondAttribute="leading" constant="16" id="4SR-nj-sWt"/>
+                            <constraint firstItem="0I0-WG-681" firstAttribute="trailing" secondItem="Jkv-ao-HK4" secondAttribute="trailing" constant="16" id="8C7-Wu-h86"/>
+                            <constraint firstItem="Jkv-ao-HK4" firstAttribute="top" secondItem="0I0-WG-681" secondAttribute="top" constant="30" id="cwY-e1-nwz"/>
+                            <constraint firstItem="0I0-WG-681" firstAttribute="bottom" secondItem="Jkv-ao-HK4" secondAttribute="bottom" constant="20" id="qA8-px-deW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="9Ek-Ys-LgH"/>

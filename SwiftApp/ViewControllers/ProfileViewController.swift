@@ -9,7 +9,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!{
+        didSet {
+            imageView.layer.cornerRadius = 150
+            imageView.contentMode = .scaleToFill
+        }
+    }
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
